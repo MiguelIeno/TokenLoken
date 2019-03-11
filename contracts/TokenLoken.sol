@@ -1,39 +1,34 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.5.0;
 import  "../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 import "../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
-import "../node_modules/openzeppelin-solidity/contracts/token/ERC20/Owned.sol";
+import "../node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol";
 
 
 /**
 *  Token Loken
 * Autor : Miguel Ieno
 */
-contract TokenLoken is ERC20 , ERC20Detailed , Owned{
+contract TokenLoken is ERC20 , ERC20Detailed , Ownable{
+   uint public INITIAL_SUPPLY = 1000;
 
 
-    
-    constructor(
-        string name,
-        string  symbol,
+
+    constructor (
+        string memory name,
+        string memory  symbol,
         uint8  decimales,
+		address anOwner,
+        
         uint256 tokensInit
     ) 
         public 
         ERC20Detailed(name, symbol, decimales)
         ERC20()
-        Owned()
+        
     {
 		tokensInit = INITIAL_SUPPLY * (10 ** uint (decimales));
-		balances[msg.sender] = tokensInit;
-        _mint(owner, tokensInit); // assigning all tokens to owner initially.
+        _mint(anOwner, tokensInit); // se le asigna al owner los tokens
     }
 
-	function setON(string _n) public onlyOwner returns (bool) {
-    Owner = _n;
-    return true;
-  }
-
-    function getON() public view returns (string) {
-    return Owner;
-  }
+	
 }
