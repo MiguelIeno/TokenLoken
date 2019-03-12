@@ -9,7 +9,6 @@ import "../node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol";
 * Autor : Miguel Ieno
 */
 contract TokenLoken is ERC20 , ERC20Detailed , Ownable{
-   uint public INITIAL_SUPPLY = 1000;
 
 
 
@@ -18,16 +17,15 @@ contract TokenLoken is ERC20 , ERC20Detailed , Ownable{
         string memory  symbol,
         uint8  decimales,
 		address anOwner,
-        
-        uint256 tokensInit
+        uint256 initial_supply
     ) 
         public 
         ERC20Detailed(name, symbol, decimales)
         ERC20()
         
     {
-		tokensInit = INITIAL_SUPPLY * (10 ** uint (decimales));
-        _mint(anOwner, tokensInit); // se le asigna al owner los tokens
+		
+        _mint(anOwner, initial_supply); // assigning all tokens to owner initially.
     }
 
 	
