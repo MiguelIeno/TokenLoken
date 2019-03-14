@@ -495,10 +495,10 @@
           }
         ],
         "contractDependencies": [
+          331,
           763,
-          890,
           821,
-          331
+          890
         ],
         "contractKind": "contract",
         "documentation": " Token Loken\nAutor : Miguel Ieno",
@@ -948,10 +948,10 @@
           }
         ],
         "contractDependencies": [
+          331,
           763,
-          890,
           821,
-          331
+          890
         ],
         "contractKind": "contract",
         "documentation": " Token Loken\nAutor : Miguel Ieno",
@@ -1294,80 +1294,15 @@
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
   "networks": {
-    "5777": {
-      "events": {
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event",
-          "signature": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0"
-        },
-        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "from",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "to",
-              "type": "address"
-            },
-            {
-              "indexed": false,
-              "name": "value",
-              "type": "uint256"
-            }
-          ],
-          "name": "Transfer",
-          "type": "event",
-          "signature": "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
-        },
-        "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "owner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "spender",
-              "type": "address"
-            },
-            {
-              "indexed": false,
-              "name": "value",
-              "type": "uint256"
-            }
-          ],
-          "name": "Approval",
-          "type": "event",
-          "signature": "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"
-        }
-      },
+    "4": {
+      "events": {},
       "links": {},
-      "address": "0xae56B12Afc5231f771701F7021EEfFb4bD2172d4",
-      "transactionHash": "0x0b5564d4bf85a2a5c7ecbf3d977869157c713e87df7cb677c9ca1d421243a322"
+      "address": "0x4d49640667F1b3A51Cc487BC1dB3214AC12955B8",
+      "transactionHash": "0xd9e757359224c95a9a178ceaddff7c4d28d6e55ad362d732a0d124573334be91"
     }
   },
   "schemaVersion": "3.0.2",
-  "updatedAt": "2019-03-12T04:57:33.403Z",
+  "updatedAt": "2019-03-14T03:26:31.210Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {
